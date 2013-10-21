@@ -58,6 +58,9 @@ on init
     symlink /efs /factory
 
     symlink /dev/block/mmcblk0p11 /dev/block/param
+    
+    # We will create our own ril-daemon service with different perm and sockets
+    stop ril-daemon
 
 on post-fs-data
     # we will remap this as /storage/sdcard with the sdcard fuse tool
@@ -662,10 +665,6 @@ on fs
 
     # don't require sim
     setprop keyguard.no_require_sim 1
-
-    # exFAT module
-    insmod /system/lib/modules/exfat_core.ko
-    insmod /system/lib/modules/exfat_fs.ko
 
     # For NV Read/Write
     chown radio system /dev/block/mmcblk0p1
