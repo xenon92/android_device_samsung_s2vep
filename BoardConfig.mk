@@ -9,17 +9,13 @@ USE_CAMERA_STUB := true
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_s2vep_defconfig
 
-# Recovery
-BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/s2vep/recovery/recovery.fstab
-TARGET_RECOVERY_INITRC := device/samsung/s2vep/recovery/init.recovery.capri_ss_s2vep.rc
-
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/s2vep/bluetooth
 
 # Recovery
+BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/samsung/s2vep/recovery/fstab.s2vep
 TARGET_RECOVERY_INITRC := device/samsung/s2vep/recovery/init.recovery.capri_ss_s2vep.rc
 RECOVERY_FSTAB_VERSION := 2
