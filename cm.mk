@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/s2vep/cm_s2vep.mk)
+$(call inherit-product, device/samsung/s2vep/full_s2vep.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2vep
