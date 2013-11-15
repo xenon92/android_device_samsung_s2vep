@@ -1,5 +1,5 @@
 # Inherit common device configuration
-$(call inherit-product, device/samsung/galaxys2plus-common/device.mk)
+$(call inherit-product, device/samsung/bcm-common/device.mk)
 
 LOCAL_PATH := device/samsung/s2vep
 

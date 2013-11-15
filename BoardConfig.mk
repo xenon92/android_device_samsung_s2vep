@@ -4,7 +4,7 @@ USE_CAMERA_STUB := true
 -include vendor/samsung/s2vep/BoardConfigVendor.mk
 
 # inherit from the common version
--include device/samsung/galaxys2plus-common/BoardConfigCommon.mk
+-include device/samsung/bcm-common/BoardConfigCommon.mk
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
