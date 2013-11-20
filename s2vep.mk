@@ -1,6 +1,9 @@
 # Inherit common device configuration
 $(call inherit-product, device/samsung/bcm-common/device.mk)
 
+# Inherit device specific vendor files
+$(call inherit-product-if-exists, vendor/samsung/galaxys2plus-common/galaxys2plus-common-vendor.mk)
+
 LOCAL_PATH := device/samsung/s2vep
 
 # Init files
