@@ -567,10 +567,6 @@ on boot
     chown system system /sys/class/sec/led/led_br_lev
     chown system system /sys/class/sec/led/led_lowpower
 
-    # Vibetonz
-    chmod 0660 /dev/tspdrv
-    chown root shell /dev/tspdrv
-
     # Voice Solution
     copy /system/etc/DiamondVoice_NB.txt /data/DiamondVoice_NB.txt
     chmod 0777 /data/DiamondVoice_NB.txt
