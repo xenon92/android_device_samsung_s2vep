@@ -76,8 +76,22 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_RIL_CLASS := ../../../device/samsung/s2vep/ril/
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/s2vep/ramdisk/fstab.capri_ss_s2vep
+TARGET_RECOVERY_FSTAB := device/samsung/s2vep/twrp.fstab
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
+
+TARGET_RECOVERY_INITRC := device/samsung/galaxys2plustwrp/ramdisk/init.recovery.capri_ss_s2vep.rc
+
+DEVICE_RESOLUTION := 480x800
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_USB_STORAGE := true
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+BOARD_HAS_NO_REAL_SDCARD := true
 
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
