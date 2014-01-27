@@ -86,6 +86,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_stora
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := s2vep,i9105P,GT-I9105P,I9105P
+
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/s2vep/cmhw/
 
