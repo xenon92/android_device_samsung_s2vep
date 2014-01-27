@@ -5,10 +5,14 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/galaxys2plus-common/galaxys2plus-common-vendor.mk)
 
-# Use high-density artwork where available
-PRODUCT_LOCALES += hdpi
-
+# Overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/s2vep/overlay
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-cache-only=0 \
+    dalvik.vm.dexopt-data-only=1
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -57,6 +61,11 @@ PRODUCT_PACKAGES += \
 # Device Settings
 PRODUCT_PACKAGES += \
 	BCMSettings
+
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zygote.disable_gl_preload=true \
+    ro.bq.gpu_to_cpu_unsupported=1 \
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
