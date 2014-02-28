@@ -66,7 +66,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zygote.disable_gl_preload=true \
     ro.bq.gpu_to_cpu_unsupported=1 \
-    ro.sf.lcd_density=180 \
+    ro.sf.lcd_density=240 \
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
