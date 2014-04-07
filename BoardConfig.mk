@@ -92,6 +92,9 @@ TARGET_OTA_ASSERT_DEVICE := s2vep,i9105P,GT-I9105P,I9105P
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/s2vep/cmhw/
 
+# GPS
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9082/include
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/s2vep/sepolicy
