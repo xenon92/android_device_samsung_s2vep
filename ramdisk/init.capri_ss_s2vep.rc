@@ -407,9 +407,6 @@ on boot
     chmod 0777 /dev/s5p-smem
     rm /data/app/tlcd_sock
 
-    # phone
-    setprop ro.telephony.call_ring.multiple 0
-
     # create data/gps for GPS daemon
     mkdir /data/gps 0770 gps system
     chown gps system /data/gps
